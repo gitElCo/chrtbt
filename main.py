@@ -1,15 +1,9 @@
 import sys
-import logging
 from PySide6.QtWidgets import QApplication
-from ui.main_window import MainWindow
+from ui.start_page import StartPage
 
 if __name__ == "__main__":
-    logging.basicConfig(
-        filename="chrtbt.log",
-        level=logging.INFO,
-        format="%(asctime)s - %(levelname)s - %(message)s"
-    )
     app = QApplication(sys.argv)
-    window = MainWindow()
-    window.show()
+    start_page = StartPage()
+    start_page.show()
     sys.exit(app.exec())
